@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    list-style: none;
+}
+
+@layer components {
+    .container {
+        @apply z-10 w-full h-full max-w-[82rem] mx-auto px-4 sm:px-8 md:px-10
+    }
+    .nav-links {
+        @apply text-sm capitalize font-semibold text-black cursor-pointer flex items-center justify-center gap-1
+    }
+    .home {
+        @apply relative top-0 bg-joyRibbons_home bg-[#0000009c] bg-blend-multiply bg-cover bg-no-repeat bg-center flex justify-center w-full h-full z-10 pt-44 pb-32 md:py-48 -mt-[100px]
+    }
+    .website-home {
+        @apply relative -mt-[108px] sm:-mt-[137px] flex justify-center w-full h-full z-10
+    }
+    .cta {
+        @apply flex items-center justify-center overflow-hidden relative w-full bg-joyRibbons_cta bg-[#0000009c] bg-blend-multiply  bg-cover bg-no-repeat bg-center
+    }
+    .rsvp {
+        @apply  relative w-full  bg-joyRibbons_rsvp bg-[#0000009c] bg-blend-multiply  bg-cover bg-no-repeat bg-center
+    }
+    .gift-category {
+        @apply rounded-xl overflow-hidden p-3 relative cursor-pointer text-black bg-joyRibbons_neutral lg:focus:shadow-[#ff1493_0px_0px_0px_1.5px] lg:hover:shadow-[#ff1493_0px_0px_0px_1.5px] lg:hover:bg-joyRibbons_joy transition-all lg:hover:text-black duration-200 ease-out
+    }
+    .hero-text-wrapper {
+        @apply flex flex-col gap-10 font-semibold justify-center items-start top-[20%] text-left absolute bottom-5 py-10 md:py-4 text-black
+    }
+    .tertiary-btn {
+        @apply w-auto border cursor-pointer border-sme_purple text-joyRibbons_lightPink bg-sme_purple rounded-[2rem] py-2 px-4 lg:hover:bg-transparent lg:hover:border-white lg:hover:text-white transition-all duration-200
+    }
+    .secondary-btn {
+        @apply w-auto border cursor-pointer border-white text-black bg-white rounded-[2rem] py-2 px-4
+    }
+    .primary-btn {
+        @apply w-auto border cursor-pointer border-sme_purple text-sme_purple bg-transparent rounded-[2rem] py-2 px-4 lg:hover:bg-sme_purple lg:hover:text-white transition-all duration-200
+    }
+    .wedding-gifts {
+        @apply flex flex-col bg-cover bg-no-repeat bg-center h-[250px] lg:h-[300px] items-center justify-evenly text-center px-4
+    }
+    .category-list {
+        @apply rounded-xl shadow-[#0000000f_0px_1px_2px,_#0000000a_0px_5px_10px]
+    }
+    .dropdown-content-list {
+        @apply text-xs font-semibold h-full text-white cursor-pointer capitalize flex flex-row items-center px-4 py-2 rounded-xl  bg-joyRibbons_deepPink 
+    }
+    .testimonial-card {
+        @apply w-[95%] mx-auto my-3 p-4 flex flex-col min-h-[220px] h-full bg-white shadow-[0_2px_6px_0_#0000001a]
+    }
+    .testimonial-card__title-first-letter {
+        @apply flex flex-col justify-center items-center bg-joyRibbons_lightPink rounded-full w-10 h-10 text-xl mr-2 font-bold text-sme_purple
+    }
+}
+
+/* navbar  */
+
+.mobile {
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.sidebar-links-wrapper {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: fit-content;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.active-nav {
+    opacity: 1;
+    display: block;
+    transform: translateY(20px);
+}
+
+.show-sidebar {
+    display: block;
+}
+
+/* portfolio */
+.portfolio .owl-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .portfolio .owl-stage-outer {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+  
+    .portfolio .owl-stage-outer {
+        width: 100%;
+        margin: 0;
+    }
+  
+    .portfolio .owl-item img {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+  }
+  
